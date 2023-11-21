@@ -8,7 +8,8 @@ import CreationalPatterns.Builder.BurgerBuilder.BurgerSize;
 import CreationalPatterns.FactoryMethod.Pizza;
 import CreationalPatterns.FactoryMethod.PizzaFactory;
 import CreationalPatterns.FactoryMethod.PizzaFactory.PizzaType;
-
+import CreationalPatterns.Prototype.Cloneable;
+import CreationalPatterns.Prototype.Documentation;
 import CreationalPatterns.SimpleFactory.CreditCard;
 import CreationalPatterns.SimpleFactory.CreditCardFactory;
 
@@ -69,6 +70,18 @@ public class App {
         builder.addCheese();
         builder.addChiliSauce();
         builder.createBurger().getBurgerComponents();
+        */
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Prototype
+        */
+        /* 
+        Documentation doc = new Documentation(10, "Hello world!");
+        Documentation clonedDoc = (Documentation) doc.clone();
+        doc.showContent();
+        clonedDoc.showContent();
         */
     }
 }
