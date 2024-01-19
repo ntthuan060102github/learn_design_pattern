@@ -23,6 +23,12 @@ import CreationalPatterns.Singleton.ThreadSafeSingleton;
 import StructuralPatterns.Composite.AGiftBase;
 import StructuralPatterns.Composite.SingleGift;
 import StructuralPatterns.Composite.GiftComposite;
+import StructuralPatterns.Decorator.ChickenPizza;
+import StructuralPatterns.Decorator.TomatoPizza;
+import StructuralPatterns.Facade.Computer;
+import StructuralPatterns.Facade.ComputerFacade;
+import StructuralPatterns.Decorator.PepperDecorator;
+import StructuralPatterns.Decorator.CheeseDecorator;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -168,5 +174,35 @@ public class App {
 
         // System.out.println(compositeGift1.getTotalPrice());
         // System.out.println(compositeGift2.getTotalPrice());
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Decorator
+         */
+
+        // TomatoPizza tomatoPizza = new TomatoPizza();
+        // ChickenPizza chickenPizza = new ChickenPizza();
+        // PepperDecorator pepperDecorator = new PepperDecorator(tomatoPizza);
+        // CheeseDecorator cheeseDecorator = new CheeseDecorator(chickenPizza);
+        // CheeseDecorator fullToppingDecorator = new CheeseDecorator(pepperDecorator);
+
+        // System.out.println(tomatoPizza.doPizza());
+        // System.out.println(chickenPizza.doPizza());
+        // System.out.println(pepperDecorator.doPizza());
+        // System.out.println(cheeseDecorator.doPizza());
+        // System.out.println(fullToppingDecorator.doPizza());
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Facade
+         */
+
+        Computer computer = new Computer();
+        ComputerFacade computerFacade = new ComputerFacade(computer);
+
+        computerFacade.turnOn();
+        computerFacade.turnOff();
     }
 }
