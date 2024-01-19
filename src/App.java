@@ -29,6 +29,8 @@ import StructuralPatterns.Facade.Computer;
 import StructuralPatterns.Facade.ComputerFacade;
 import StructuralPatterns.Decorator.PepperDecorator;
 import StructuralPatterns.Decorator.CheeseDecorator;
+import StructuralPatterns.Proxy.LabDoor;
+import StructuralPatterns.Proxy.SecureDoor;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -199,10 +201,22 @@ public class App {
          * Facade
          */
 
-        Computer computer = new Computer();
-        ComputerFacade computerFacade = new ComputerFacade(computer);
+        // Computer computer = new Computer();
+        // ComputerFacade computerFacade = new ComputerFacade(computer);
 
-        computerFacade.turnOn();
-        computerFacade.turnOff();
+        // computerFacade.turnOn();
+        // computerFacade.turnOff();
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Proxy
+         */
+
+        LabDoor labDoor = new LabDoor();
+        SecureDoor secureDoor = new SecureDoor(labDoor);
+
+        secureDoor.open("test");
+        secureDoor.open("password");
     }
 }
