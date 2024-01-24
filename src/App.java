@@ -4,6 +4,11 @@ import BehavioralPatterns.chain_of_responsibility.AAccount;
 import BehavioralPatterns.chain_of_responsibility.Bank;
 import BehavioralPatterns.chain_of_responsibility.Bitcoin;
 import BehavioralPatterns.chain_of_responsibility.Paypal;
+import BehavioralPatterns.command.Buld;
+import BehavioralPatterns.command.RemoteControl;
+import BehavioralPatterns.command.TurnOnCommand;
+import BehavioralPatterns.command.TurnOffCommand;
+
 import CreationalPatterns.AbstractFactory.AbstractFactory;
 import CreationalPatterns.AbstractFactory.Store;
 import CreationalPatterns.AbstractFactory.Store.MaterialType;
@@ -229,13 +234,27 @@ public class App {
          * Chain of Responsibility
          */
 
-        AAccount bank = new Bank(200);
-        AAccount paypal = new Paypal(500);
-        AAccount bitcoin = new Bitcoin(1000);
+        // AAccount bank = new Bank(200);
+        // AAccount paypal = new Paypal(500);
+        // AAccount bitcoin = new Bitcoin(1000);
 
-        bank.setNext(paypal);
-        paypal.setNext(bitcoin);
+        // bank.setNext(paypal);
+        // paypal.setNext(bitcoin);
 
-        bank.pay(700);
+        // bank.pay(700);
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Command
+         */
+
+        // Buld buld = new Buld();
+        // TurnOnCommand turnOnCommand = new TurnOnCommand(buld);
+        // TurnOffCommand turnOffCommand = new TurnOffCommand(buld);
+        // RemoteControl remoteControl = new RemoteControl();
+
+        // remoteControl.submit(turnOnCommand);
+        // remoteControl.submit(turnOffCommand);
     }
 }
