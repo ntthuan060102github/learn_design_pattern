@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import BehavioralPatterns.chain_of_responsibility.AAccount;
+import BehavioralPatterns.chain_of_responsibility.Bank;
+import BehavioralPatterns.chain_of_responsibility.Bitcoin;
+import BehavioralPatterns.chain_of_responsibility.Paypal;
 import CreationalPatterns.AbstractFactory.AbstractFactory;
 import CreationalPatterns.AbstractFactory.Store;
 import CreationalPatterns.AbstractFactory.Store.MaterialType;
@@ -213,10 +217,25 @@ public class App {
          * Proxy
          */
 
-        LabDoor labDoor = new LabDoor();
-        SecureDoor secureDoor = new SecureDoor(labDoor);
+        // LabDoor labDoor = new LabDoor();
+        // SecureDoor secureDoor = new SecureDoor(labDoor);
 
-        secureDoor.open("test");
-        secureDoor.open("password");
+        // secureDoor.open("test");
+        // secureDoor.open("password");
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Chain of Responsibility
+         */
+
+        AAccount bank = new Bank(200);
+        AAccount paypal = new Paypal(500);
+        AAccount bitcoin = new Bitcoin(1000);
+
+        bank.setNext(paypal);
+        paypal.setNext(bitcoin);
+
+        bank.pay(700);
     }
 }
