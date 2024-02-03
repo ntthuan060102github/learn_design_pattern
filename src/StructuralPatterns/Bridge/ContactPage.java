@@ -9,10 +9,7 @@ public class ContactPage implements IWebPage{
     }
 
     @Override
-    public String getContent()
-    {
-        return """
-            ContactPage in %s
-        """.formatted(this.theme.getColor());
+    public String getContent() {
+        return String.format("ContactPage in %s", this.theme.getColor());
     }
 }

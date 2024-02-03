@@ -8,6 +8,13 @@ import BehavioralPatterns.command.Buld;
 import BehavioralPatterns.command.RemoteControl;
 import BehavioralPatterns.command.TurnOnCommand;
 import BehavioralPatterns.command.TurnOffCommand;
+import BehavioralPatterns.iterator.Item;
+import BehavioralPatterns.iterator.Menu;
+import BehavioralPatterns.iterator.IItemIterator;
+import BehavioralPatterns.mediator.Chatroom;
+import BehavioralPatterns.mediator.User;
+import BehavioralPatterns.memento.Editor;
+import BehavioralPatterns.memento.EditorMemento;
 
 import CreationalPatterns.AbstractFactory.AbstractFactory;
 import CreationalPatterns.AbstractFactory.Store;
@@ -256,5 +263,60 @@ public class App {
 
         // remoteControl.submit(turnOnCommand);
         // remoteControl.submit(turnOffCommand);
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Iterator
+         */
+
+        // Menu menu = new Menu();
+        // menu.addItem(new Item("Home", "/home"));
+        // menu.addItem(new Item("Java", "/java"));
+        // menu.addItem(new Item("Spring Boot", "/spring-boot"));
+ 
+        // IItemIterator<Item> iterator = menu.iterator();
+
+        // while (iterator.hasNext()) {
+        //     Item item = iterator.next();
+        //     System.out.println(item);
+        // }
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Mediator
+         */
+            
+        // Chatroom chatroom = new Chatroom();
+        // User user1 = new User("Thuan", chatroom);
+        // User user2 = new User("Nhung", chatroom);
+
+        // user1.sendMessage("m1");
+        // user1.sendMessage("m1");
+        // user2.sendMessage("m3");
+        // user1.sendMessage("m4");
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Memento
+         */
+
+        // Editor editor = new Editor();
+
+        // editor.type("1");
+        // System.out.println(editor.getContent());
+
+        // editor.type("2");
+        // System.out.println(editor.getContent());
+
+        // EditorMemento saved = editor.save();
+
+        // editor.type("3");
+        // System.out.println(editor.getContent());
+
+        // editor.undo(saved);
+        // System.out.println(editor.getContent());
     }
 }
