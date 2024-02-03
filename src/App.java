@@ -15,7 +15,8 @@ import BehavioralPatterns.mediator.Chatroom;
 import BehavioralPatterns.mediator.User;
 import BehavioralPatterns.memento.Editor;
 import BehavioralPatterns.memento.EditorMemento;
-
+import BehavioralPatterns.observer.IObserver;
+import BehavioralPatterns.observer.Subject;
 import CreationalPatterns.AbstractFactory.AbstractFactory;
 import CreationalPatterns.AbstractFactory.Store;
 import CreationalPatterns.AbstractFactory.Store.MaterialType;
@@ -318,5 +319,30 @@ public class App {
 
         // editor.undo(saved);
         // System.out.println(editor.getContent());
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Observer
+         */
+
+        // Subject subject = new Subject();
+        // IObserver observer1 = new IObserver() {
+        //     public void update(String message)
+        //     {
+        //         System.out.println("[Oserver 1]: " + message); 
+        //     }
+        // };
+        // IObserver observer2 = new IObserver() {
+        //     public void update(String message)
+        //     {
+        //         System.out.println("[Oserver 2]: " + message); 
+        //     }
+        // };
+
+        // subject.attach(observer1);
+        // subject.attach(observer2);
+
+        // subject.notifyChange(("change"));
     }
 }
