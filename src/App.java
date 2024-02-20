@@ -17,6 +17,9 @@ import BehavioralPatterns.memento.Editor;
 import BehavioralPatterns.memento.EditorMemento;
 import BehavioralPatterns.observer.IObserver;
 import BehavioralPatterns.observer.Subject;
+import BehavioralPatterns.strategy.BubbleSortStrategy;
+import BehavioralPatterns.strategy.QuickSortStrategy;
+import BehavioralPatterns.strategy.Sorter;
 import BehavioralPatterns.visitor.IHuman;
 import BehavioralPatterns.visitor.IMonster;
 import BehavioralPatterns.visitor.CuteDogie;
@@ -369,5 +372,19 @@ public class App {
 
         // warrior.hit(dracula);
         // wizard.hit(dracula);
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Strategy
+         */
+
+        // int[] smallData = {1, 3, 9, 4};
+        // int[] bigData = {1, 3, 9, 4, 7, 9, 5, 1, 2, 6, 4};
+
+        // Sorter sorter = new Sorter(new BubbleSortStrategy(), new QuickSortStrategy());
+
+        // sorter.sort(smallData);
+        // sorter.sort(bigData);
     }
 }
