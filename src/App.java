@@ -17,6 +17,13 @@ import BehavioralPatterns.memento.Editor;
 import BehavioralPatterns.memento.EditorMemento;
 import BehavioralPatterns.observer.IObserver;
 import BehavioralPatterns.observer.Subject;
+import BehavioralPatterns.visitor.IHuman;
+import BehavioralPatterns.visitor.IMonster;
+import BehavioralPatterns.visitor.CuteDogie;
+import BehavioralPatterns.visitor.Dracula;
+import BehavioralPatterns.visitor.Warrior;
+import BehavioralPatterns.visitor.Wizard;
+
 import CreationalPatterns.AbstractFactory.AbstractFactory;
 import CreationalPatterns.AbstractFactory.Store;
 import CreationalPatterns.AbstractFactory.Store.MaterialType;
@@ -344,5 +351,23 @@ public class App {
         // subject.attach(observer2);
 
         // subject.notifyChange(("change"));
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Visitor
+         */
+
+        // IHuman warrior = new Warrior();
+        // IHuman wizard = new Wizard();
+
+        // IMonster dogie = new CuteDogie();
+        // IMonster dracula = new Dracula();
+
+        // warrior.hit(dogie);
+        // wizard.hit(dogie);
+
+        // warrior.hit(dracula);
+        // wizard.hit(dracula);
     }
 }
