@@ -21,6 +21,8 @@ import BehavioralPatterns.state.Phone;
 import BehavioralPatterns.strategy.BubbleSortStrategy;
 import BehavioralPatterns.strategy.QuickSortStrategy;
 import BehavioralPatterns.strategy.Sorter;
+import BehavioralPatterns.template_method.AndroidBuilder;
+import BehavioralPatterns.template_method.IosBuilder;
 import BehavioralPatterns.visitor.IHuman;
 import BehavioralPatterns.visitor.IMonster;
 import BehavioralPatterns.visitor.CuteDogie;
@@ -398,5 +400,29 @@ public class App {
 
         // phone.pickUp();
         // phone.dial();
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * Template Method
+         */
+
+        AndroidBuilder androidBuilder = new AndroidBuilder();
+        androidBuilder.build();
+
+        // Output:
+        // Running android tests
+        // Linting the android code
+        // Assembling the android build
+        // Deploying android build to server
+
+        IosBuilder iosBuilder = new IosBuilder();
+        iosBuilder.build();
+
+        // Output:
+        // Running ios tests
+        // Linting the ios code
+        // Assembling the ios build
+        // Deploying ios build to server
     }
 }
