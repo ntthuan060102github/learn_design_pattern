@@ -17,6 +17,7 @@ import BehavioralPatterns.memento.Editor;
 import BehavioralPatterns.memento.EditorMemento;
 import BehavioralPatterns.observer.IObserver;
 import BehavioralPatterns.observer.Subject;
+import BehavioralPatterns.state.Phone;
 import BehavioralPatterns.strategy.BubbleSortStrategy;
 import BehavioralPatterns.strategy.QuickSortStrategy;
 import BehavioralPatterns.strategy.Sorter;
@@ -386,5 +387,16 @@ public class App {
 
         // sorter.sort(smallData);
         // sorter.sort(bigData);
+
+        /*-------------------------------------------------------------------------------------- */
+
+        /*
+         * State
+         */
+
+        // Phone phone = new Phone();
+
+        // phone.pickUp();
+        // phone.dial();
     }
 }
